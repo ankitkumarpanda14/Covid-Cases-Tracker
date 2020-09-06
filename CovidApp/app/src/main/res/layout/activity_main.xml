@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/curedPerText"
+        android:layout_width="99dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="46dp"
+        android:text="Cured"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/increasedPerText"
+        app:layout_constraintEnd_toStartOf="@+id/curedText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deathPerText" />
+
+    <TextView
+        android:id="@+id/increasedPerText"
+        android:layout_width="99dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="44dp"
+        android:text="Increased"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/TimeText"
+        app:layout_constraintEnd_toStartOf="@+id/IncreasedText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/curedPerText" />
+
+    <TextView
+        android:id="@+id/deathText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="88dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/deathPerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/deathPerText"
+        app:layout_constraintTop_toTopOf="@+id/deathPerText" />
+
+    <TextView
+        android:id="@+id/curedText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="88dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/curedPerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/curedPerText"
+        app:layout_constraintTop_toTopOf="@+id/curedPerText" />
+
+    <TextView
+        android:id="@+id/IncreasedText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="85dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/increasedPerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/increasedPerText"
+        app:layout_constraintTop_toTopOf="@+id/increasedPerText" />
+
+    <TextView
+        android:id="@+id/TimeText"
+        android:layout_width="344dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="39dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/graph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/increasedPerText" />
+
+    <TextView
+        android:id="@+id/deathPerText"
+        android:layout_width="99dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="52dp"
+        android:text="Death"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/curedPerText"
+        app:layout_constraintEnd_toStartOf="@+id/deathText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activePerText" />
+
+    <TextView
+        android:id="@+id/activePerText"
+        android:layout_width="99dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="47dp"
+        android:text="Active"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/deathPerText"
+        app:layout_constraintEnd_toStartOf="@+id/ActiveText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/ActiveText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="88dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/activePerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activePerText"
+        app:layout_constraintTop_toTopOf="@+id/activePerText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="2dp"
+        android:nestedScrollingEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimeText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
